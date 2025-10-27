@@ -65,7 +65,7 @@ The Feature layer can consume from the src layer and itself (boundaries prevent 
 
 The src layer can only use itself (it's shared layer).
 
-![Data Flow Diagram](src/assets/data-flow.webp)
+![Data Flow Diagram](frontend/src/assets/data-flow.webp)
 
 
 What could be better:
