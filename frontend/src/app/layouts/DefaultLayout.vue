@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import { ElContainer, ElHeader, ElMain, ElFooter, ElMenu, ElMenuItem, ElLink } from "element-plus";
+import { Sunny, Moon } from "@element-plus/icons-vue";
+import { ElContainer, ElHeader, ElMain, ElFooter, ElMenu, ElMenuItem, ElLink, ElSwitch } from "element-plus";
+
+import { useThemeStore } from "@/store/useThemeStore";
+
+const themeStore = useThemeStore();
 </script>
 
 <template>
@@ -13,6 +18,14 @@ import { ElContainer, ElHeader, ElMain, ElFooter, ElMenu, ElMenuItem, ElLink } f
       >
         <ElMenuItem index="/">Home</ElMenuItem>
         <ElMenuItem index="/about">About</ElMenuItem>
+        <ElSwitch
+          :model-value="themeStore.isDark"
+          class="switch"
+          inline-prompt
+          :active-icon="Moon"
+          :inactive-icon="Sunny"
+          @change="themeStore.toggleTheme"
+        />
       </ElMenu>
     </ElHeader>
 
@@ -48,6 +61,11 @@ import { ElContainer, ElHeader, ElMain, ElFooter, ElMenu, ElMenuItem, ElLink } f
 .menu {
   display: flex;
   justify-content: center;
+}
+
+.switch {
+  align-self: center;
+  margin-left: 20px;
 }
 
 .main-content {

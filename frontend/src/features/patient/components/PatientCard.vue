@@ -40,7 +40,7 @@ onMounted(() => {
 .img-box {
   flex-grow: 1;
   display: flex;
-  max-height: 320px;
+  max-height: 310px;
   justify-content: center;
   align-items: center;
 }
