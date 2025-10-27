@@ -16,7 +16,7 @@ export const useThemeStore = defineStore("theme", () => {
       localStorage.setItem("theme", newTheme);
       document.documentElement.className = newTheme;
     },
-    { immediate: true }
+    { immediate: true },
   );
 
   return {

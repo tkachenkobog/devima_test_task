@@ -1,6 +1,15 @@
 <script setup lang="ts">
 import { Sunny, Moon } from "@element-plus/icons-vue";
-import { ElContainer, ElHeader, ElMain, ElFooter, ElMenu, ElMenuItem, ElLink, ElSwitch } from "element-plus";
+import {
+  ElContainer,
+  ElHeader,
+  ElMain,
+  ElFooter,
+  ElMenu,
+  ElMenuItem,
+  ElLink,
+  ElSwitch,
+} from "element-plus";
 
 import { useThemeStore } from "@/store/useThemeStore";
 
@@ -10,12 +19,7 @@ const themeStore = useThemeStore();
 <template>
   <ElContainer class="layout">
     <ElHeader>
-      <ElMenu 
-        mode="horizontal" 
-        :router="true" 
-        default-active="/"
-        class="menu"
-      >
+      <ElMenu mode="horizontal" :router="true" default-active="/" class="menu">
         <ElMenuItem index="/">Home</ElMenuItem>
         <ElMenuItem index="/about">About</ElMenuItem>
         <ElSwitch
@@ -36,8 +40,8 @@ const themeStore = useThemeStore();
     <ElFooter class="footer">
       <div class="content">
         <span>© 2025</span>
-        <ElLink 
-          href="https://www.linkedin.com/in/tkachenko-bohdan" 
+        <ElLink
+          href="https://www.linkedin.com/in/tkachenko-bohdan"
           target="_blank"
           :underline="false"
           type="primary"

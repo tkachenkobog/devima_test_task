@@ -25,13 +25,15 @@ export const useVitalsStore = defineStore("vitals", () => {
     return `-${Math.floor(diffSeconds / 60)}m`;
   };
 
-   const formatFullTime = (timestamp: string) => {
-   return dayjs(timestamp).format("DD.MM.YYYY HH:mm");
+  const formatFullTime = (timestamp: string) => {
+    return dayjs(timestamp).format("DD.MM.YYYY HH:mm");
   };
 
   const generateInitialVitals = () => {
     vitals.value = Array.from({ length: 7 }, (_, i) => ({
-      timestamp: dayjs().subtract(6 - i, "minute").toISOString(),
+      timestamp: dayjs()
+        .subtract(6 - i, "minute")
+        .toISOString(),
       heartRate: 75 + Math.floor(Math.random() * 15),
       temperature: parseFloat((36.5 + Math.random()).toFixed(1)),
       oxygenSaturation: 95 + Math.floor(Math.random() * 5),
@@ -42,17 +44,13 @@ export const useVitalsStore = defineStore("vitals", () => {
     vitals.value.map((vital: Vital) => formatTime(vital.timestamp)),
   );
 
-   const chartFullTimestamps = computed(() =>
+  const chartFullTimestamps = computed(() =>
     vitals.value.map((vital: Vital) => formatFullTime(vital.timestamp)),
   );
 
-  const chartTemperatures = computed(() =>
-    vitals.value.map((vital: Vital) => vital.temperature),
-  );
+  const chartTemperatures = computed(() => vitals.value.map((vital: Vital) => vital.temperature));
 
-  const chartHeartRates = computed(() =>
-    vitals.value.map((vital: Vital) => vital.heartRate),
-  );
+  const chartHeartRates = computed(() => vitals.value.map((vital: Vital) => vital.heartRate));
 
   const chartOxygenSaturations = computed(() => {
     const saturations = vitals.value.map((vital: Vital) => vital.oxygenSaturation);

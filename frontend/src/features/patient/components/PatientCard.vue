@@ -18,9 +18,15 @@ onMounted(() => {
       <img :src="patientImage" alt="Patient Image" class="patient-image" />
     </div>
     <div v-if="patientStore.patient" class="patient-data">
-      <p><strong>Name:</strong> {{ patientStore.patient.name ?  patientStore.patient.name : "john doe"}}</p>
+      <p>
+        <strong>Name:</strong>
+        {{ patientStore.patient.name ? patientStore.patient.name : "john doe" }}
+      </p>
       <p><strong>Age:</strong> {{ patientStore.patient.age ? patientStore.patient.age : "66" }}</p>
-      <p><strong>Gender:</strong> {{ patientStore.patient.gender ? patientStore.patient.gender : "cat"  }}</p>
+      <p>
+        <strong>Gender:</strong>
+        {{ patientStore.patient.gender ? patientStore.patient.gender : "cat" }}
+      </p>
     </div>
   </ElCard>
 </template>
