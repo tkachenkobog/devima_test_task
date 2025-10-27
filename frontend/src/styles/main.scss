@@ -24,6 +24,31 @@ dd {
   padding: 0;
 }
 
+ul, ol {
+  padding-left: 32px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ul ul, ol ul {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  list-style-type: disc;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+code {
+  background-color: rgb(164, 246, 224);
+  color: #818181;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
