@@ -71,3 +71,23 @@ h6 {
   line-height: 1.5;
   font-weight: 400;
 }
+
+.chart-marker {
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 2px;
+  width: 10px;
+  height: 10px;
+}
+
+.chart-marker--temperature {
+  background-color: $devima-main-color;
+}
+
+.chart-marker--heart-rate {
+  background-color: $devima-tertiary-color;
+}
+
+.chart-marker--oxygen {
+  background-color: $devima-secondary-color;
+}

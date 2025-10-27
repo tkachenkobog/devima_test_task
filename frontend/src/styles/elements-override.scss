@@ -9,6 +9,8 @@
 @use "element-plus/theme-chalk/src/footer.scss";
 @use "element-plus/theme-chalk/src/menu.scss";
 @use "element-plus/theme-chalk/src/menu-item.scss";
+@use "element-plus/theme-chalk/src/link.scss";
+@use "element-plus/theme-chalk/src/notification.scss";
 
 :root {
   --el-color-primary: #{$bodin-color};
@@ -19,6 +21,14 @@
 }
 
 .el-button {
-  padding-left: 80px; /* Double the assumed default 20px */
-  padding-right: 80px; /* Double the assumed default 20px */
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.el-menu--horizontal.el-menu {
+  border: none;
+}
+
+.el-card {
+  border-radius: 10px;
 }
