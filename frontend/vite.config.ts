@@ -24,5 +24,8 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'happy-dom',
+    typecheck: {
+      tsconfig: './tsconfig.vitest.json'
+    }
   },
 })

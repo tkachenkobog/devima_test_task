@@ -39,23 +39,23 @@ export const useVitalsStore = defineStore("vitals", () => {
   };
 
   const chartTimestamps = computed(() =>
-    vitals.value.map((vital) => formatTime(vital.timestamp)),
+    vitals.value.map((vital: Vital) => formatTime(vital.timestamp)),
   );
 
    const chartFullTimestamps = computed(() =>
-    vitals.value.map((vital) => formatFullTime(vital.timestamp)),
+    vitals.value.map((vital: Vital) => formatFullTime(vital.timestamp)),
   );
 
   const chartTemperatures = computed(() =>
-    vitals.value.map((vital) => vital.temperature),
+    vitals.value.map((vital: Vital) => vital.temperature),
   );
 
   const chartHeartRates = computed(() =>
-    vitals.value.map((vital) => vital.heartRate),
+    vitals.value.map((vital: Vital) => vital.heartRate),
   );
 
   const chartOxygenSaturations = computed(() => {
-    const saturations = vitals.value.map((vital) => vital.oxygenSaturation);
+    const saturations = vitals.value.map((vital: Vital) => vital.oxygenSaturation);
     return saturations;
   });
 
