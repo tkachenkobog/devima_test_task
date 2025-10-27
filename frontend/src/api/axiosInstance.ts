@@ -1,4 +1,5 @@
 import axios from "axios";
+import { ElNotification } from "element-plus";
 
 import { API_BASE_URL } from "@/constants/api";
 
@@ -24,6 +25,17 @@ axiosInstance.interceptors.response.use(
     return response;
   },
   (error) => {
+    let message = "An unexpected error occurred";
+    if (!error.response) {
+      message = "The server is unavailable. Please гun 'npm run devStart' from /backend dir";
+    }
+
+    ElNotification({
+      title: "error",
+      message: message,
+      type: "error",
+    });
+
     return Promise.reject(error);
   },
 );
