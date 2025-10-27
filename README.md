@@ -9,6 +9,7 @@
 3) Other:
 	- `npm run lint`
 	- `npm run test`
+	- `npm run format`
 
 All changes are split into logical commits for easier reviewing.
 
@@ -19,7 +20,9 @@ All changes are split into logical commits for easier reviewing.
 - Configure data flow from back to front: 20-30 min
 - Create graph components, create a patient card, create stores, create 2 unit tests :D, write mock-functions for default data, functions for calculation and clearing the interval for graphs: 1.5h
 - Add light/dark mode and responsive layout: 30-40 min
-- Containerization: 15 min All time for basic functionality: 3-3.5h
+- Containerization: 15 min 
+---
+Time for basic functionality: 3-3.5h
 
 ## Stack:
 
@@ -63,7 +66,7 @@ The App layer can consume data from anywhere in the app (src and features).
 
 The Feature layer can consume from the src layer and itself (boundaries prevent it from importing other features).
 
-The src layer can only use itself (it's shared layer).
+The src layer can only use itself.
 
 ![Data Flow Diagram](frontend/src/assets/data-flow.webp)
 
@@ -78,4 +81,4 @@ What could be better:
 - Add more test FE/BE
 - Add more data
 - Accessibility audit 
-- Bundle audit (now 1.1 mb it's good result for this stuck)
+- Bundle audit (now 1.1 mb it's good result for this stuck, but could be better)
