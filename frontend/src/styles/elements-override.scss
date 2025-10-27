@@ -1,0 +1,24 @@
+@use "@/styles/variables.scss" as *;
+
+@use "element-plus/theme-chalk/src/base.scss";
+@use "element-plus/theme-chalk/src/button.scss";
+@use "element-plus/theme-chalk/src/card.scss";
+@use "element-plus/theme-chalk/src/container.scss";
+@use "element-plus/theme-chalk/src/header.scss";
+@use "element-plus/theme-chalk/src/main.scss";
+@use "element-plus/theme-chalk/src/footer.scss";
+@use "element-plus/theme-chalk/src/menu.scss";
+@use "element-plus/theme-chalk/src/menu-item.scss";
+
+:root {
+  --el-color-primary: #{$bodin-color};
+  --el-button-bg-color: #{$bodin-color};
+  --el-button-border-color: #{$bodin-color};
+  --el-button-hover-bg-color: #{$bodin-color};
+  --el-button-hover-border-color: #{$bodin-color};
+}
+
+.el-button {
+  padding-left: 80px; /* Double the assumed default 20px */
+  padding-right: 80px; /* Double the assumed default 20px */
+}

@@ -1,0 +1,49 @@
+{
+  "name": "bodin-template",
+  "private": true,
+  "version": "0.2.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "test": "vitest",
+    "format": "prettier --write \"src/**/*.{js,ts,vue,json,css,scss,md}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts,vue,json,css,scss,md}\""
+  },
+  "dependencies": {
+    "axios": "1.12.2",
+    "element-plus": "2.11.5",
+    "pinia": "3.0.3",
+    "vue": "3.5.22",
+    "vue-router": "4.0.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.38.0",
+    "@types/node": "24.6.0",
+    "@typescript-eslint/parser": "8.46.2",
+    "@vitejs/plugin-vue": "6.0.1",
+    "@vue/test-utils": "2.4.6",
+    "@vue/tsconfig": "0.8.1",
+    "eslint": "9.38.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-import-resolver-typescript": "4.4.4",
+    "eslint-plugin-boundaries": "5.1.0",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-project-structure": "3.13.3",
+    "eslint-plugin-vue": "10.5.1",
+    "globals": "16.4.0",
+    "happy-dom": "20.0.8",
+    "prettier": "3.6.2",
+    "sass-embedded": "1.93.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.46.2",
+    "vite": "npm:rolldown-vite@7.1.14",
+    "vitest": "4.0.3",
+    "vue-tsc": "3.1.0"
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@7.1.14"
+  }
+}
