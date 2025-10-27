@@ -6,6 +6,11 @@
 2) Containerized DE (ready for prod)
 	- run Docker
 	- run `docker-compose up --build`
+3) Other:
+	- `npm run lint`
+	- `npm run test`
+
+All changes are split into logical commits for easier reviewing.
 
 ## Time Spent:
 

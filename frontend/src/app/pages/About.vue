@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ElCard } from "element-plus";
-import dataFlow from "@/assets/data-flow.webp";
 
+import dataFlow from "@/assets/data-flow.webp";
 </script>
 
 <template>
@@ -24,6 +24,13 @@ import dataFlow from "@/assets/data-flow.webp";
               <li>run <code>docker-compose up --build</code></li>
             </ul>
           </li>
+          <li>
+            Other
+            <ul>
+              <li>run <code>npm run test</code></li>
+              <li>run <code>npm run lint</code></li>
+            </ul>
+          </li>
         </ol>
 
         <h2>Stack:</h2>
@@ -31,6 +38,8 @@ import dataFlow from "@/assets/data-flow.webp";
           Vue3, TS, Express.js, Pinia, Echarts, Vue-router 4, Vite, Element Plus, Axios, ESLint,
           Prettier, Vitest, Happy Dom, Saas, nginx, Docker.
         </p>
+        ---
+        <p>All changes are split into logical commits for easier reviewing.</p>
 
         <h2>Features:</h2>
         <ul>
@@ -70,24 +79,24 @@ import dataFlow from "@/assets/data-flow.webp";
         <h2>Template Architecture:</h2>
         <ul>
           <li>
-            This template is based on my favorite feature-based architecture. Instead of grouping code
-            by its technical type (like <code>/components</code>, <code>/stores</code>,
+            This template is based on my favorite feature-based architecture. Instead of grouping
+            code by its technical type (like <code>/components</code>, <code>/stores</code>,
             <code>/api</code>, etc.), we group all files related to a specific feature (a business
             logic unit).
           </li>
           <li>
             In this project, <code>patient</code> and <code>vitals</code> are good examples — inside
-            each feature, we have all related components, stores, composables, etc., that belong only
-            to that feature. Only the feature layer contains business logic.
+            each feature, we have all related components, stores, composables, etc., that belong
+            only to that feature. Only the feature layer contains business logic.
           </li>
           <li>
             At the <code>/src</code> level, we have the shared layer of the app — it includes all
-            shared components used across the project, the Axios instance, assets, store initializers
-            for managing plugins and the store itself, etc.
+            shared components used across the project, the Axios instance, assets, store
+            initializers for managing plugins and the store itself, etc.
           </li>
           <li>
-            The <code>app/</code> level is the top layer, containing the app skeleton (it initializes
-            the app, routing, layouts, etc.).
+            The <code>app/</code> level is the top layer, containing the app skeleton (it
+            initializes the app, routing, layouts, etc.).
           </li>
           <li>
             By using ESLint boundaries, we define the data flow: The App layer can consume data from
@@ -96,18 +105,25 @@ import dataFlow from "@/assets/data-flow.webp";
             use itself.
           </li>
         </ul>
-<img :src="dataFlow" class="arch" />
+        <img :src="dataFlow" class="arch" />
         <h2>What could be better:</h2>
         <ul>
           <li>WebSockets && Postgres</li>
           <li>Auth for M.D && Patient with roles</li>
           <li>Add debounce for resizeChart.</li>
           <li>Add notifications/alerts for dangerous health conditions.</li>
-          <li>Add export to CSV (token effective) and FHIR resource for using data for medical purposes.</li>
-          <li>Add Gemini API to make a twice-daily request for summarization of the patient's state, and save it for future analysis in chunks.</li>
+          <li>
+            Add export to CSV (token effective) and FHIR resource for using data for medical
+            purposes.
+          </li>
+          <li>
+            Add Gemini API to make a twice-daily request for summarization of the patient's state,
+            and save it for future analysis in chunks.
+          </li>
           <li>Add more test FE/BE</li>
           <li>Add more data</li>
           <li>Accessibility audit</li>
+          <li>Function for control count i X-legend graph (time) could be better</li>
           <li>Bundle audit (now 1.1 mb it's good result for this stuck)</li>
         </ul>
       </div>
@@ -148,7 +164,7 @@ import dataFlow from "@/assets/data-flow.webp";
     font-size: 28px;
     margin-bottom: 16px;
     margin-top: 32px;
-    
+
     &:first-child {
       margin-top: 0;
     }
