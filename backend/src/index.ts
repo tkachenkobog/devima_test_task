@@ -1,8 +1,11 @@
 import express from "express";
+import cors from "cors";
 import { patientData, generateVital } from "./utils/dataGenerators";
 
 const app = express();
 const PORT = 3000;
+
+app.use(cors());
 
 app.get("/api/patient/:id", (_req, res) => {
   res.json(patientData);

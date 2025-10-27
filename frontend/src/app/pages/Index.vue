@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { Feature1Card } from "@/features/feature1";
-import { Feature2Card } from "@/features/feature2";
+import { PatientCard } from "@/features/patient";
+import { VitalsCard } from "@/features/vitals";
+
 </script>
 
 <template>
-  <Feature1Card />
-  <Feature2Card />
+  <PatientCard />
+  <VitalsCard />
 </template>
 
 <style scoped lang="scss"></style>
